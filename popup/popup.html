@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+        <link rel="stylesheet" href="water.css">
         <link rel="stylesheet" href="custom.css">
     </head>
     <body>
@@ -27,6 +27,24 @@
             aanvaarden hiervoor geen enkele verantwoordelijkheid. Poortwachter
             is niet gemaakt door of verbonden aan de Open Universiteit.
         </p>
+
+        <form id="permissions">
+            <fieldset id="denied">
+                <button id="grantButton">Geef toegang</button>
+                <label id="deniedLabel">
+                    Poortwachter heeft toegang nodig tot https://login.ou.nl/.
+                </label>
+            </fieldset>
+
+            <fieldset id="granted">
+                <button id="denyButton">Ontzeg toegang</button>
+                <label id="grantedLabel">
+                    Poortwachter heeft toegang tot https://login.ou.nl/.
+                </label>
+            </fieldset>
+        </form>
+
+        <script src="popup.js" type="module"></script>
     </body>
 </html>
 

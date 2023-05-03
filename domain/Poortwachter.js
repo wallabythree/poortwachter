@@ -28,7 +28,7 @@ class Poortwachter {
     }
 
     /**
-     * Checks if Poortwachter is active
+     * Check if Poortwachter is active
      *
      * @return true if Poortwachter is active, else false
      */
@@ -65,15 +65,12 @@ class Poortwachter {
     }
 
     /**
-     * Authenticate to the OU SSO service.
-     *
-     * Grabs a fresh OpenAM SSO cookie. This cookie is automatically added to
-     * the browser's cookie store and will be submitted whenever an OU
-     * application redirects the user to the login page.
+     * Refresh the OU SSO cookie.
      */
     async refresh() {
         const cookie = await this.getCookie();
 
+        // if we don't have a cookie, stop trying to refresh it
         if (!cookie) {
             this.stop();
             return;
@@ -100,21 +97,23 @@ class Poortwachter {
 
         const json = await response.json();
 
+        // delete our cookie if the server says it has expired
         if (json && json.valid === false) {
             this.deleteCookie();
-            this.stop();
         }
-        else if (response.status !== 200
+
+        // if we receive an unexpected response,
+        // stop trying to refresh the cookie
+        if (response.status !== 200
             || !json
             || !json.uid
         ) {
             this.stop();
-            throw new Error(JSON.stringify(json));
         }
     }
 
     /**
-     * Starts keeping the cookie fresh, if present.
+     * Start keeping the cookie fresh.
      */
     async start() {
         await this.stop();
@@ -130,7 +129,7 @@ class Poortwachter {
     }
 
     /**
-     * Stops keeping the cookie fresh.
+     * Stop keeping the cookie fresh.
      */
     async stop() {
         await browser.alarms.clear(this.#config.ALARM_NAME);

@@ -1,4 +1,5 @@
 let config = {
+    ORIGINS: "*://login.ou.nl/",
     ALARM_NAME: "poortwachter",
     SSO_COOKIE_NAME: "ousso",
     BASE_URL: "https://login.ou.nl",
