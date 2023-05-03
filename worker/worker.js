@@ -23,12 +23,10 @@ chrome.permissions.onRemoved.addListener(() => {
 });
 
 chrome.cookies.onChanged.addListener(
-    () => poortwachter.start()
+    () => updateStatus()
 );
 
 chrome.runtime.onInstalled.addListener(
-    () => {
-        poortwachter.start();
-    }
+    () => updateStatus()
 );
 
