@@ -13,7 +13,7 @@
     "icons": {
         "128": "images/poortwachter.png"
     },
-    "version": "0.2.1",
+    "version": "0.2.1.1",
     "action": {
         "default_popup": "popup/popup.html",
         "default_icon": "images/poortwachter.png"
