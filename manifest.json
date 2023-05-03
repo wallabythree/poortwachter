@@ -4,7 +4,7 @@
     "description": "Stay logged in on OU.NL",
     "author": "wallaby",
     "browser_specific_settings": {
-    "gecko": {
+        "gecko": {
             "id": "poortwachter-a21f@wallaby3.com",
             "update_url": "https://raw.githubusercontent.com/wallabythree/poortwachter/main/updates.json"
         }
@@ -13,7 +13,7 @@
     "icons": {
         "128": "images/poortwachter.png"
     },
-    "version": "0.0.0.3",
+    "version": "0.0.0.4",
     "action": {
         "default_popup": "popup/popup.html",
         "default_icon": "images/poortwachter.png"
@@ -23,7 +23,6 @@
         "type": "module"
     },
     "permissions": [
-        "webRequest",
         "alarms",
         "cookies",
         "storage"
