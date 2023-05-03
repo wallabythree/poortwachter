@@ -27,9 +27,13 @@ class Poortwachter {
         });
     }
 
+    /**
+     * Checks if Poortwachter is active
+     *
+     * @return true if Poortwachter is active, else false
+     */
     async isActive() {
         const alarm = await browser.alarms.get(this.#config.ALARM_NAME);
-        console.log(alarm);
         return alarm != null;
     }
 
@@ -54,7 +58,6 @@ class Poortwachter {
             url: this.#config.BASE_URL
         });
     }
-
 
     async hasCookie() {
         const cookie = await this.getCookie();
@@ -95,15 +98,9 @@ class Poortwachter {
             }
         );
 
-        console.log(response);
-
         const json = await response.json();
 
-        console.log(json);
-
         if (json && json.valid === false) {
-            console.log("false!");
-            console.log(json);
             this.deleteCookie();
             this.stop();
         }
@@ -111,12 +108,10 @@ class Poortwachter {
             || !json
             || !json.uid
         ) {
-            console.log("bad response!");
             this.stop();
             throw new Error(JSON.stringify(json));
         }
     }
-
 
     /**
      * Starts keeping the cookie fresh, if present.
