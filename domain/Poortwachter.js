@@ -82,7 +82,6 @@ class Poortwachter {
             tokenId: cookie.value
         };
 
-        // request OpenAM Callback Information object
         const response = await fetch(
             this.#config.SSO_REFRESH_URL,
             { 
@@ -118,7 +117,6 @@ class Poortwachter {
     async start() {
         await this.stop();
 
-        // authenticate once before scheduling alarm to verify credentials
         await chrome.alarms.create(
             this.#config.ALARM_NAME,
             {

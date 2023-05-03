@@ -14,13 +14,13 @@ async function updateStatus() {
     }
 }
 
-chrome.permissions.onAdded.addListener(() => {
-    updateStatus();
-});
+chrome.permissions.onAdded.addListener(
+    () => updateStatus()
+);
 
-chrome.permissions.onRemoved.addListener(() => {
-    updateStatus();
-});
+chrome.permissions.onRemoved.addListener(
+    () => updateStatus()
+);
 
 chrome.cookies.onChanged.addListener(
     () => updateStatus()
