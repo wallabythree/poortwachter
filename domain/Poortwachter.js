@@ -101,7 +101,7 @@ class Poortwachter {
 
         console.log(json);
 
-        if (json && json.valid == "false") {
+        if (json && json.valid === false) {
             console.log("false!");
             console.log(json);
             this.deleteCookie();
