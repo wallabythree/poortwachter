@@ -20,8 +20,6 @@ class Poortwachter {
         this.#config = settings;
         this.#period = period;
 
-        console.log("connstruuuct!");
-
         browser.alarms.onAlarm.addListener((alarmInfo) => {
             if (alarmInfo.name === this.#config.ALARM_NAME) {
                 this.refresh();
@@ -71,7 +69,6 @@ class Poortwachter {
      * application redirects the user to the login page.
      */
     async refresh() {
-        console.log("refreeesh!");
         const cookie = await this.getCookie();
 
         if (!cookie) {
@@ -112,7 +109,7 @@ class Poortwachter {
         }
         else if (response.status !== 200
             || !json
-            || json.idletime != 0
+            || !json.uid
         ) {
             console.log("bad response!");
             this.stop();
@@ -125,7 +122,6 @@ class Poortwachter {
      * Starts keeping the cookie fresh, if present.
      */
     async start() {
-        console.log("staaart!");
         await this.stop();
 
         // authenticate once before scheduling alarm to verify credentials
