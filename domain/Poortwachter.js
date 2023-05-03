@@ -16,7 +16,7 @@ class Poortwachter {
      * @param settings A config object with preconfigured settings
      * @param period The period between authentication updates.
      */
-    constructor(settings = config, period = 1) {
+    constructor(settings = config, period = 5) {
         this.#config = settings;
         this.#period = period;
 
