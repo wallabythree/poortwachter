@@ -2,7 +2,7 @@ import poortwachter from '../domain/Poortwachter.js';
 import config from "../config.js";
 
 async function updateStatus() {
-    const hasPermissions = await browser.permissions.contains({
+    const hasPermissions = await chrome.permissions.contains({
         origins: [config.ORIGINS]
     });
 
@@ -14,19 +14,19 @@ async function updateStatus() {
     }
 }
 
-browser.permissions.onAdded.addListener(() => {
+chrome.permissions.onAdded.addListener(() => {
     updateStatus();
 });
 
-browser.permissions.onRemoved.addListener(() => {
+chrome.permissions.onRemoved.addListener(() => {
     updateStatus();
 });
 
-browser.cookies.onChanged.addListener(
+chrome.cookies.onChanged.addListener(
     () => poortwachter.start()
 );
 
-browser.runtime.onInstalled.addListener(
+chrome.runtime.onInstalled.addListener(
     () => {
         poortwachter.start();
     }

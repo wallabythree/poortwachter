@@ -20,7 +20,7 @@ class Poortwachter {
         this.#config = settings;
         this.#period = period;
 
-        browser.alarms.onAlarm.addListener((alarmInfo) => {
+        chrome.alarms.onAlarm.addListener((alarmInfo) => {
             if (alarmInfo.name === this.#config.ALARM_NAME) {
                 this.refresh();
             }
@@ -33,7 +33,7 @@ class Poortwachter {
      * @return true if Poortwachter is active, else false
      */
     async isActive() {
-        const alarm = await browser.alarms.get(this.#config.ALARM_NAME);
+        const alarm = await chrome.alarms.get(this.#config.ALARM_NAME);
         return alarm != null;
     }
 
@@ -43,7 +43,7 @@ class Poortwachter {
      * @return the SSO cookie if present, else null
      */
     async getCookie() {
-        return await browser.cookies.get({
+        return await chrome.cookies.get({
             name: this.#config.SSO_COOKIE_NAME,
             url: this.#config.BASE_URL
         });
@@ -53,7 +53,7 @@ class Poortwachter {
      * Delete the SSO cookie, if present.
      */
     async deleteCookie() {
-        await browser.cookies.remove({
+        await chrome.cookies.remove({
             name: this.#config.SSO_COOKIE_NAME,
             url: this.#config.BASE_URL
         });
@@ -119,7 +119,7 @@ class Poortwachter {
         await this.stop();
 
         // authenticate once before scheduling alarm to verify credentials
-        await browser.alarms.create(
+        await chrome.alarms.create(
             this.#config.ALARM_NAME,
             {
                 when: 1,
@@ -132,7 +132,7 @@ class Poortwachter {
      * Stop keeping the cookie fresh.
      */
     async stop() {
-        await browser.alarms.clear(this.#config.ALARM_NAME);
+        await chrome.alarms.clear(this.#config.ALARM_NAME);
     }
 }
 

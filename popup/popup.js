@@ -18,7 +18,7 @@ function hideElement(elem) {
 }
 
 async function updateForm() {
-    const hasPermissions = await browser.permissions.contains({
+    const hasPermissions = await chrome.permissions.contains({
         origins: [config.ORIGINS]
     });
 
@@ -32,18 +32,18 @@ async function updateForm() {
     }
 }
 
-browser.permissions.onAdded.addListener(() => {
+chrome.permissions.onAdded.addListener(() => {
     updateForm();
 });
 
-browser.permissions.onRemoved.addListener(() => {
+chrome.permissions.onRemoved.addListener(() => {
     updateForm();
 });
 
 grantButton.addEventListener(
     "click",
     () => {
-        browser.permissions.request({
+        chrome.permissions.request({
             origins: [config.ORIGINS]
         });
     }
@@ -52,7 +52,7 @@ grantButton.addEventListener(
 denyButton.addEventListener(
     "click",
     () => {
-        browser.permissions.remove({
+        chrome.permissions.remove({
             origins: [config.ORIGINS]
         });
     }
