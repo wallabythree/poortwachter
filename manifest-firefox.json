@@ -24,8 +24,7 @@
     },
     "permissions": [
         "alarms",
-        "cookies",
-        "storage"
+        "cookies"
     ],
     "host_permissions": [
         "*://login.ou.nl/"
