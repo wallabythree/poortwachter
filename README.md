@@ -23,8 +23,8 @@ grant Poortwachter the necessary permissions.
 The Chrome version is awaiting approval from the Chrome Web Store. In the
 meantime, follow these steps to install Poortwachter manually:
 
-1. Download **poortwachter-vX.X.X.X-chrome.zip** from
-[Releases](https://github.com/wallabythree/poortwachter/releases).
+1. Download **poortwachter-chrome.zip** from the
+[latest release](https://github.com/wallabythree/poortwachter/releases/latest).
 2. Unzip the extension in a dedicated folder.
 3. Browse to [chrome://extensions](chrome://extensions).
 4. Select **Developer mode** in the top right of the screen. (Edge users: open
