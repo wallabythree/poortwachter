@@ -59,6 +59,11 @@ class Poortwachter {
         });
     }
 
+    /**
+     * Check if the OU SSO cookie is present.
+     *
+     * @return true if the cookie is present, else false
+     */
     async hasCookie() {
         const cookie = await this.getCookie();
         return cookie != null;
