@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Poortwachter",
+    "description": "Stay logged in on OU.NL",
+    "author": "wallaby",
+    "icons": {
+        "128": "images/poortwachter.png"
+    },
+    "version": "0.0.0.5",
+    "homepage_url": "https://github.com/wallabythree/poortwachter",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "images/poortwachter.png"
+    },
+    "background": {
+        "service_worker": "worker/worker.js",
+        "type": "module"
+    },
+    "permissions": [
+        "alarms",
+        "cookies"
+    ],
+    "optional_host_permissions": [
+        "*://login.ou.nl/"
+    ]
+}
+
