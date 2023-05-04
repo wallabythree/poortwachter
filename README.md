@@ -51,8 +51,8 @@ asking the OU login server to keep your session alive.
 
 The OU uses [OpenAM](https://github.com/OpenIdentityPlatform/OpenAM) for access
 management. OpenAM provides a specific REST endpoint for refreshing server-side
-refreshing server-side sessions. Poortwachter simply calls this endpoint
-periodically with the SSO cookie value as *tokenId*. See the
+sessions. Poortwachter simply calls this endpoint periodically with the SSO
+cookie value as *tokenId*. See the
 [ForgeRock AM documentation](https://backstage.forgerock.com/docs/am/7.3/sessions-guide/managing-sessions-REST.html#rest-api-session-refresh)
 for a full explanation.
 
