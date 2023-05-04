@@ -16,7 +16,7 @@ Click
 to install the latest release.
 
 After installation, click on the Poortwachter icon and press **Geef toegang** to
-grant Poortwachter the necessary permissions.
+grant the necessary permissions.
 
 ### Chrome / Edge
 
