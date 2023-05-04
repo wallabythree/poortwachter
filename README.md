@@ -1,7 +1,5 @@
 # Poortwachter
 
-*Note: this extension is not made or endorsed by the Open Universiteit.*
-
 ![](https://raw.githubusercontent.com/wallabythree/poortwachter/main/images/dev/screenshot-firefox-cropped.png)
 
 Poortwachter is a browser extension for Firefox and Chrome / Edge that keeps you
