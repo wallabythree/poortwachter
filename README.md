@@ -15,7 +15,7 @@ Head to [Releases](https://github.com/wallabythree/poortwachter/releases) and
 click **poortwachter-vX.X.X.X-firefox.xpi**.
 
 After installation, click on the Poortwachter icon and press **Geef toegang** to
-give Poortwachter the necessary permissions.
+grant Poortwachter the necessary permissions.
 
 ### Chrome / Edge
 
@@ -32,7 +32,7 @@ the menu in the top left of the screen).
 Poortwachter. This will install the extension.
 
 After installation, click on the Poortwachter icon and press **Geef toegang** to
-give Poortwachter the necessary permissions.
+grant Poortwachter the necessary permissions.
 
 ## How does it work?
 
