@@ -33,7 +33,7 @@ the menu in the top left of the screen).
 Poortwachter. This will install the extension.
 
 After installation, click on the Poortwachter icon and press **Geef toegang** to
-grant Poortwachter the necessary permissions.
+grant the necessary permissions.
 
 ## How does it work?
 
