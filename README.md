@@ -11,11 +11,10 @@ signed in with the Open Universiteit for as long as your browser is active.
 
 ### Firefox
 
-Click
+1. Click
 [here](https://github.com/wallabythree/poortwachter/releases/latest/download/poortwachter-firefox.xpi)
 to install the latest release.
-
-After installation, click on the Poortwachter icon and press **Geef toegang** to
+2. After installation, click on the Poortwachter icon and press **Geef toegang** to
 grant the necessary permissions.
 
 ### Chrome / Edge
@@ -31,8 +30,7 @@ meantime, follow these steps to install Poortwachter manually:
 the menu in the top left of the screen).
 5. Select **Load unpacked** and choose the folder where you unzipped
 Poortwachter. This will install the extension.
-
-After installation, click on the Poortwachter icon and press **Geef toegang** to
+6. After installation, click on the Poortwachter icon and press **Geef toegang** to
 grant the necessary permissions.
 
 ## How does it work?
