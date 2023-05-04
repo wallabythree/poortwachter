@@ -11,8 +11,9 @@ signed in with the Open Universiteit for as long as your browser is active.
 
 ### Firefox
 
-Head to [Releases](https://github.com/wallabythree/poortwachter/releases) and
-click **poortwachter-vX.X.X.X-firefox.xpi**.
+Click
+[here](https://github.com/wallabythree/poortwachter/releases/latest/download/poortwachter-firefox.xpi)
+to install the latest release.
 
 After installation, click on the Poortwachter icon and press **Geef toegang** to
 grant Poortwachter the necessary permissions.
