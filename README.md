@@ -17,18 +17,9 @@ grant the necessary permissions.
 
 ### Chrome / Edge
 
-The Chrome version is awaiting approval from the Chrome Web Store. In the
-meantime, follow these steps to install Poortwachter manually:
-
-1. Download
-[poortwachter-chrome.zip](https://github.com/wallabythree/poortwachter/releases/latest/download/poortwachter-chrome.zip).
-2. Unzip the extension in a dedicated folder.
-3. Browse to [chrome://extensions](chrome://extensions).
-4. Select **Developer mode** in the top right of the screen. (Edge users: open
-the menu in the top left of the screen).
-5. Select **Load unpacked** and choose the folder where you unzipped
-Poortwachter. This will install the extension.
-6. After installation, click on the Poortwachter icon and press **Geef toegang** to
+1. Click [here](https://chrome.google.com/webstore/detail/poortwachter/ngbaoghamegfibhenakakgppdpeajcnp)
+to install the latest release from the Chrome Web Store.
+2. After installation, click on the Poortwachter icon and press **Geef toegang** to
 grant the necessary permissions.
 
 ## How does it work?
